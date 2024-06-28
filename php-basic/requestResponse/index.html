@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h3>Hello PHP Developer</h3>
+
+    <form action="save.php?id=123$order=aa&sort=1" method="post" enctype="multipart/form-data">
+        <div>
+            <label for="yourName">Your Name</label>
+            <input type="text" name="yourName"  value="" id="yourName">
+        </div>
+        <br>
+        <div>
+            <label for="yourBirthDay">Your Birth Day</label>
+            <input type="date" name="yourBirthDay"  value="" id="yourBirthDay">
+        </div>
+        <!-- <br> -->
+        <!-- <div>
+            <label for="yourPhoto">Your Name</label>
+            <input type="file" name="yourPhoto"  value="" id="yourPhoto">
+        </div> -->
+        <hr>
+
+        <button>Sent</button>
+    </form>
+</body>
+</html>
