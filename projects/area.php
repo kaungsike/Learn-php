@@ -1,3 +1,36 @@
+<?php
+
+// echo "<pre>";
+
+// var_dump(empty($_POST["width"]));
+// var_dump(empty($_POST["height"]));
+// var_dump(empty($_POST["calcBtn"]));
+
+
+// print_r($_POST);
+
+if(empty($_POST["width"]) || empty( $_POST["height"])){
+    die("Require All Inputs!");
+}
+
+
+
+
+
+
+// die("<br><hr><br><br>_______Processing_____");
+
+
+
+
+
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -93,7 +126,7 @@
 
             <hr class="border-gray-500 mb-5">
 
-            <form action="./area.php" method="post">
+            <!-- <form action="./area.php" method="post">
                 <div>
                     <div class="max-w-sm mb-3">
                         <label for="width" class="block text-sm font-medium mb-2 dark:text-white">Width</label>
@@ -103,11 +136,36 @@
                         <label for="height" class="block text-sm font-medium mb-2 dark:text-white">Height</label>
                         <input type="number" name="height" id="height" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="example : 50">
                     </div>
-                    <button name="calcBtn" type="submit" class="mt-5 py-3 px-4 w-[46%] justify-center inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-blue-600 text-blue-600 hover:border-blue-500 hover:text-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:border-blue-500 dark:text-blue-500 dark:hover:text-blue-400 dark:hover:border-blue-400">
-  Button
-</button>
+                    <button type="submit" class="mt-5 py-3 px-4 w-[46%] justify-center inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-blue-600 text-blue-600 hover:border-blue-500 hover:text-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:border-blue-500 dark:text-blue-500 dark:hover:text-blue-400 dark:hover:border-blue-400">
+                        Button
+                    </button>
                 </div>
-            </form>
+            </form> -->
+
+            <?php
+
+
+            $width = $_POST["width"];
+            $height = $_POST["height"];
+
+
+            $area = $width * $height;
+
+
+            // echo $area;
+
+
+            ?>
+
+            <div class="flex flex-col items-center gap-10">
+            <p class="text-3xl mt-5 text-center flex items-center justify-center w-full">
+                <?= $area ?> m<sup>2</sup>
+            </p>
+
+            <a href="./index.php" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-blue-600 text-blue-600 hover:border-blue-500 hover:text-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:border-blue-500 dark:text-blue-500 dark:hover:text-blue-400 dark:hover:border-blue-400">
+                Back
+            </a>
+            </div>
 
         </section>
 
